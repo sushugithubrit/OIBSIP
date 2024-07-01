@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    background-color: white,radiant(0,0,0,0.1);
+  
+}
+#nav-bar{
+    width:auto;
+    height:50px;
+    background-color: rgb(84, 104, 108);
+    align-items: center;
+}
+img{
+    width:60px;
+    height:50px;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+ul li{
+    list-style:none;
+}
+ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 250px;
+}
+.photo{
+    background-position: absolute;
+    width:1550px;
+    height:650px;
+}
+.text {
+    position: absolute;
+    padding:20px;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 20px; 
+    font-size: 55px;
+    font-family:inherit;
+}
+#i3 {
+    position: absolute;
+    top: 55%; 
+    right: 50%; 
+    width: 100px; 
+    height: auto; 
+    font-size: 40px;
+    color:white;
+    transition: 1s;
+  }
+  #i1{
+    position: absolute;
+    top: 55%;
+    right: 45%; 
+    width: 100px; 
+    height: auto; 
+    color:white;
+    font-size: 40px;
+    transition: 1s;
+  }
+  #i2{
+    position: absolute;
+    top: 55%; 
+    right: 40%; 
+    width: 100px; 
+    height: auto;
+    font-size: 40px;
+    color:white;
+    transition: 1s;
+  }
+  #i1:hover{
+    transition: 1s;
+    transform: scale(1.3);
+    z-index:1;
+  }
+  #i2:hover{
+    transition: 1s;
+    transform: scale(1.3);
+    z-index:1;
+  }
+  #i3:hover{
+    transition: 1s;
+    transform: scale(1.3);
+    z-index:1;
+  }
+  #AboutUs{
+    display:flex;
+    margin:10px;
+    padding: 10px;
+    background-color: white;
+  }
+  .summer{
+    position:relative;
+    margin:1%;
+    border-radius:10px;
+    display: inline;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+    transition: 1s;
+  }
+  .summer img{
+    display: block;
+    border-radius: 5px;
+  }
+  .summer:hover{
+     transform: scale(1.1);
+     z-index:1;
+  }
+  .winter{
+    margin-left:3%;
+  }
+  .imgwin{
+    width:430px;
+    height:250px;
+    margin:5px;
+  }
+  .autumn{
+    margin-left:3%;
+  }
+  .imgsum{
+    margin: 5px;
+    width:430px;
+    height:auto;
+  }
+  p{
+    font-family: inherit;
+    font-size: 25px;
+  }
+  #i4{
+    color:black;
+    font-size: 40px;
+  }
+  a{
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+  }
+ #destinations1{
+  display: flex;
+  margin-left: 65px;
+ }
+ .imgdes1{
+  padding:10px;
+  margin:10px;
+  margin-left: 65px;
+  width:350px;
+  height:auto;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+  transition: 1s;
+  border-radius: 15px;
+ }
+ .imgdes1:hover{
+  transform:scale(1.2);
+  z-index:2;
+ }
+ .text1{
+  position: absolute;
+  top:223%;
+  right:85%;
+  color:white;
+ }
+ .text2{
+  position: absolute;
+  top:223%;
+  right:55%;
+  color:white;
+ }
+ .text3{
+  position: absolute;
+  top:223%;
+  left:68%;
+  color:white;
+ }
+ .text4{
+  position: absolute;
+  top:264%;
+  right:85%;
+  color:white;
+ }
+ .text5{
+  position: absolute;
+  top:264%;
+  right:54%;
+  color:white;
+ }
+ .text6{
+  position: absolute;
+  top:264%;
+  left:68%;
+  color:white;
+ }
+ #destination3{
+    display: flex;
+    margin-left: 10px;
+ }
+ .text7{
+  position: absolute;
+  top:310%;
+  right:82%;
+  color:white;
+ }
+ .text8{
+  position: absolute;
+  top:310%;
+  right:52%;
+  color:white;
+ }
+ .text9{
+  position: absolute;
+  top:310%;
+  left:68%;
+  color:black;
+ }
+ #destinations4{
+ display: flex;
+ margin-left: 250px;
+ }
+ .text10{
+  position: absolute;
+  top:350%;
+  right:65%;
+  color:white;
+ }
+ .text11{
+  position: absolute;
+  top:350%;
+  left:55%;
+  color:white;
+ }
+ .footer {
+  margin-top:10%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <section id="nav-bar">
+            <div id="nav1">
+                <ul>
+                    <li><img src="C:\Users\simpl\Desktop\airplane.png"></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" target="_parent">About Us</a></li>
+                    <li><a href="mailto:sushmitha2121@gmail.com" href="tel:+1234567890">Contact Us</a></li>
+                    <li><a href="#">Sign-In</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div id="intro">
+                <img src="C:\Users\simpl\Desktop\travel.jpg" class="photo">
+                <h1 class="text">Travel and Explore Different Tastes and cultures all over the world</h1>
+                <a href="https://www.instagram.com/?hl=en" target="_blank"><i id="i3" class="fa-brands fa-instagram"></i></a>
+                <a href="http://in.youtube.com/" target="_blank"><i id="i1" class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i id="i2" class="fa-brands fa-facebook"></i></a>
+            </div>
+        </section>
+        <section>
+            <h1 style="text-align: center;">About Us</h1>
+            <h2 style="text-align: center;">Most Visited Places</h2>
+            <div id="AboutUs">
+                <div class="summer">
+                    <h1 style="text-align: center;">Summer&#128508;</h1>
+                    <a href="https://www.bing.com/maps?osid=41ffe31e-2003-4259-8cce-06df292eaaf7&cp=67.031297~-44.079304&lvl=4.11&pi=0&imgid=42bcbe70-0f26-43e3-807a-8dc439fd52d5&v=2&sV=2&form=S00027" target="_blank"><img  class="imgsum" src="C:\Users\simpl\Desktop\greenland.jpg"></a>
+                    <p style="text-align: cent er;">Traveling in summer can be a wonderful experience, offering opportunities for adventure, relaxation, and exploration.About thousands of people visit to different placse in summer through our website.Most Visited places in summer are islands,oceans where we can find the glory of sunset.</p><br>
+                    <a href="#" target="_self"><i id="i4" class="fa-solid fa-location-dot"></i>Greenland</a>
+                </div>
+            <div class="winter summer">
+                <h1  style="text-align: center;">Winter</h1>
+                <a href="https://www.bing.com/maps?osid=66f4cdd7-dc99-4477-b4ef-a87e7ce77a61&cp=51.255908~-115.37467&lvl=12.46&pi=0&imgid=1840a686-f0ef-45d9-a3c2-a0a29fd80d0d&v=2&sV=2&form=S00027" target="_blank"><img class="imgwin" src="C:\Users\simpl\Desktop\lake miniwanka.jpg"></a>
+                <p style="text-align: center;">Winters in India herald a time of unparalleled beauty and diverse experiences, making it the best season for travelling. From the snow-laden mountains of Kashmir to the vibrant carnivals in Goa, there’s a myriad of enchanting places to visit in India in winter, each offering its unique allure</p><br>
+                <a href="#"><i id="i4" class="fa-solid fa-location-dot"></i>Lake Minnewanka</a>
+            </div>
+            <div class="autumn summer winter">
+                <h1 style="text-align: center;">Autumn</h1>
+                <a href="https://www.bing.com/maps?&mepi=101~Local~Unknown~Map_Image&ty=18&q=Scottish%20Highlands&ss=ypid.YN1029x13915071860857509784&segment=Local&ppois=57.17937088012695_-4.399364948272705_Scottish%20Highlands_YN1029x13915071860857509784~&cp=57.179371~-4.399365&lvl=16&v=2&sV=1&FORM=MPSRPL" target="_blank"><img class="imgwin" src="C:\Users\simpl\Desktop\scottish highlands.jpg"></a>
+                <p style="text-align: center;">fall is the perfect season for travelling.fall travel offers up discounts that you just won’t get during summer. It’s one of the cheapest times of year to travel, with lower prices on airfares, hotels, train tickets, activities and even food and drink specials.Forget the sweltering heat of summer or the bitter cold of winter.It's not cold and not hot.Best season to explore.</p><br>
+                <a href="#"><i id="i4" class="fa-solid fa-location-dot"></i>Scottish Highlands</a>
+            </div>
+            </div>
+        </section>
+        <section>
+            <h1 style="text-align: center;">Top Destinations In India</h1>
+            <h1 style="text-align: center;font-size: 35px;font-family: inherit;">Summer</h1><br>
+            <div id="Destinations1">
+                    <a href="kashmir.com"><img src="C:\Users\simpl\Desktop\kashmir.jpg" class="imgdes1" alt=""></a>
+                    
+                    <a href="https://himachaltourism.gov.in/destination/kinnaur/"><img src="C:\Users\simpl\Desktop\kinnaur.jpg" class="imgdes1" alt=""></a>
+                    
+                    <a href="https://himachaltourism.gov.in/destination/manali/"><img src="C:\Users\simpl\Desktop\manali.jpg" class="imgdes1" alt=""></a>
+                    
+            </div>
+            
+            <h1 style="text-align: center;font-size: 35px;font-family: inherit;">Winter</h1><br>
+            <div id="destination3">
+                <a href="https://www.holidify.com/places/delhi/packages.html"><img src="C:\Users\simpl\Desktop\delhi.jpg" class="imgdes1"></a>
+                
+                <a href="https://www.holidify.com/places/varanasi/packages.html"><img src="C:\Users\simpl\Desktop\varanasi.jpg" class="imgdes1"></a>
+                
+                <a href="https://www.holidify.com/places/tajmahal/packages.html"><img src="C:\Users\simpl\Desktop\tajmahal.jpg" class="imgdes1"></a>
+                
+            </div>
+            
+            <footer class="footer">
+                <p>&copy; 2024 sushmitha. All rights reserved.</p>
+                <nav>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                  <a href="#">Contact Us</a>
+                </nav>
+              </footer>
+        </section>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html>
